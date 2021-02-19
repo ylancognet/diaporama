@@ -17,7 +17,7 @@ function suivant() {
     if (n > 4) { n = 1 }
     dimage(n)
     clearInterval(change)
-    change= setInterval(suivant,temp_passer);
+    change= setInterval(suivant,temps_passer);
     temps_decompte= temps_passer/1000
 
 }
@@ -25,9 +25,9 @@ function précedent() {
     n--
     if (n < 1) { n = 4 }
     temps_decompte = temps_passer /1000
-    changeImage(n)
+    dimage(n)
     clearInterval(change)
-    change=setInterval(next, temps_passer);
+    change=setInterval(suivant, temps_passer);
     temps_decompte= temps_passer /1000
 }
 function gestion_timer() {
@@ -48,10 +48,10 @@ function temps_moins(){
 
 function pause(){
     clearTimeout(time)
-    document.getElementById("bip").innerHTML = "en pause";
+    document.getElementById("bip").innerHTML = "&#x23F8";
     clearInterval(change)
 }
 function play(){
-    change= setInterval(next, temps_passer);
+    change= setInterval(suivant, temps_passer);
     time=setTimeout(temps_moins, 1000)
 }

@@ -14,3 +14,6 @@ button{
     color: rgb(0, 0, 0);
     background-color: rgb(54, 98, 54);
 }
+p{
+  font-size: 40px;
+}
